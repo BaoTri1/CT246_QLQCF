@@ -21,5 +21,30 @@ namespace Project1
         {
 
         }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            Form_NhanVien nv = new Form_NhanVien();
+            nv.Show();
+        }
+
+        private void btnQLKho_Click(object sender, EventArgs e)
+        {
+            Kho_Form kho = new Kho_Form();
+            kho.Show();
+        }
+
+        private void btnTongket_Click(object sender, EventArgs e)
+        {
+            Form_HoaDon hd = new Form_HoaDon();
+            hd.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Form_Login login = new Form_Login();
+            login.Show();
+            this.Visible = false;
+        }
     }
 }

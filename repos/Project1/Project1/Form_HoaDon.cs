@@ -16,16 +16,5 @@ namespace Project1
         {
             InitializeComponent();
         }
-
-        private void Form_HoaDon_Load(object sender, EventArgs e)
-        {
-          
-
-        }
-
-        private void TTToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            userControl_ThanhToan1.BringToFront();
-        }
     }
 }

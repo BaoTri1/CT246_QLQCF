@@ -16,12 +16,13 @@ namespace Project1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Kho_Form());
+            Application.Run(new Form_Login());
             //Application.Run(new Form_ThemMoiNV());
             //Application.Run(new NhapKho_Form());
             //Application.Run(new Form_NhanVien());
-            Application.Run(new Form_HoaDon());
-
+            //Application.Run(new Form_HoaDon());
+            //Application.Run(new Form_InHD());
+            //Application.Run(new Form_ChiTietHD());
 
         }
     }

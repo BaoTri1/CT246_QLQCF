@@ -69,16 +69,23 @@ namespace Project1
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            String SqlString = "Insert into NhanVien values('" + txtMaNV.Text + "', '" +
-                                txtTenNV.Text + "', " + GT + ", '" + txtSDT.Text + "', '"
-                                + cmbChucVU.Text + "', '" + txtDiaChi.Text + "');";
+            String SqlString = "Insert into NhanVien values('" + txtMaNV.Text + "', N'" +
+                                txtTenNV.Text + "', " + GT + ", '" + txtSDT.Text + "', N'"
+                                + cmbChucVU.Text + "', N'" + txtDiaChi.Text + "');";
             DialogResult dlr = MessageBox.Show("Xác nhận các thông tin đã được nhập đúng?", "Thông Báo"
                                                 , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(dlr == DialogResult.Yes)
             {
-                cmd = new SqlCommand(SqlString, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thông tin đã được thêm vào!");
+                try
+                {
+                    cmd = new SqlCommand(SqlString, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Thông tin đã được thêm vào!");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
             }
             btnLamMoi.Enabled = true;
         }

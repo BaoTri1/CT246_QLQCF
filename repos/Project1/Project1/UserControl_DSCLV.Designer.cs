@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_DSCLV));
             this.panelDSCLV = new System.Windows.Forms.Panel();
-            this.lblHeading = new System.Windows.Forms.Label();
-            this.lblChonNgay = new System.Windows.Forms.Label();
-            this.DTP_ChonNgay = new System.Windows.Forms.DateTimePicker();
-            this.btnXemDS = new System.Windows.Forms.Button();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.DGV_BangDS = new System.Windows.Forms.DataGridView();
+            this.btnXemDS = new System.Windows.Forms.Button();
+            this.DTP_ChonNgay = new System.Windows.Forms.DateTimePicker();
+            this.lblChonNgay = new System.Windows.Forms.Label();
+            this.lblHeading = new System.Windows.Forms.Label();
             this.ColumnMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXuatFile = new System.Windows.Forms.Button();
             this.panelDSCLV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_BangDS)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +48,7 @@
             // panelDSCLV
             // 
             this.panelDSCLV.BackColor = System.Drawing.Color.Transparent;
+            this.panelDSCLV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelDSCLV.Controls.Add(this.btnXuatFile);
             this.panelDSCLV.Controls.Add(this.DGV_BangDS);
             this.panelDSCLV.Controls.Add(this.btnXemDS);
@@ -59,45 +60,17 @@
             this.panelDSCLV.Size = new System.Drawing.Size(1561, 849);
             this.panelDSCLV.TabIndex = 0;
             // 
-            // lblHeading
+            // btnXuatFile
             // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(473, 29);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(529, 42);
-            this.lblHeading.TabIndex = 0;
-            this.lblHeading.Text = "Danh Sách Các Ca Làm Việc";
-            // 
-            // lblChonNgay
-            // 
-            this.lblChonNgay.AutoSize = true;
-            this.lblChonNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChonNgay.Location = new System.Drawing.Point(316, 137);
-            this.lblChonNgay.Name = "lblChonNgay";
-            this.lblChonNgay.Size = new System.Drawing.Size(127, 25);
-            this.lblChonNgay.TabIndex = 1;
-            this.lblChonNgay.Text = "Chọn Ngày:";
-            // 
-            // DTP_ChonNgay
-            // 
-            this.DTP_ChonNgay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTP_ChonNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTP_ChonNgay.Location = new System.Drawing.Point(459, 132);
-            this.DTP_ChonNgay.Name = "DTP_ChonNgay";
-            this.DTP_ChonNgay.Size = new System.Drawing.Size(430, 30);
-            this.DTP_ChonNgay.TabIndex = 2;
-            // 
-            // btnXemDS
-            // 
-            this.btnXemDS.BackColor = System.Drawing.Color.White;
-            this.btnXemDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemDS.Location = new System.Drawing.Point(963, 124);
-            this.btnXemDS.Name = "btnXemDS";
-            this.btnXemDS.Size = new System.Drawing.Size(198, 51);
-            this.btnXemDS.TabIndex = 3;
-            this.btnXemDS.Text = "Xem Danh Sách";
-            this.btnXemDS.UseVisualStyleBackColor = false;
+            this.btnXuatFile.BackColor = System.Drawing.Color.White;
+            this.btnXuatFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatFile.Location = new System.Drawing.Point(678, 714);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(231, 54);
+            this.btnXuatFile.TabIndex = 5;
+            this.btnXuatFile.Text = "Xuất File Excel";
+            this.btnXuatFile.UseVisualStyleBackColor = false;
+            this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
             // 
             // DGV_BangDS
             // 
@@ -118,8 +91,50 @@
             this.DGV_BangDS.Size = new System.Drawing.Size(1321, 448);
             this.DGV_BangDS.TabIndex = 4;
             // 
+            // btnXemDS
+            // 
+            this.btnXemDS.BackColor = System.Drawing.Color.White;
+            this.btnXemDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemDS.Location = new System.Drawing.Point(963, 124);
+            this.btnXemDS.Name = "btnXemDS";
+            this.btnXemDS.Size = new System.Drawing.Size(198, 51);
+            this.btnXemDS.TabIndex = 3;
+            this.btnXemDS.Text = "Xem Danh Sách";
+            this.btnXemDS.UseVisualStyleBackColor = false;
+            this.btnXemDS.Click += new System.EventHandler(this.btnXemDS_Click);
+            // 
+            // DTP_ChonNgay
+            // 
+            this.DTP_ChonNgay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_ChonNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_ChonNgay.Location = new System.Drawing.Point(459, 132);
+            this.DTP_ChonNgay.Name = "DTP_ChonNgay";
+            this.DTP_ChonNgay.Size = new System.Drawing.Size(430, 30);
+            this.DTP_ChonNgay.TabIndex = 2;
+            // 
+            // lblChonNgay
+            // 
+            this.lblChonNgay.AutoSize = true;
+            this.lblChonNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChonNgay.Location = new System.Drawing.Point(316, 137);
+            this.lblChonNgay.Name = "lblChonNgay";
+            this.lblChonNgay.Size = new System.Drawing.Size(127, 25);
+            this.lblChonNgay.TabIndex = 1;
+            this.lblChonNgay.Text = "Chọn Ngày:";
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(473, 29);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(529, 42);
+            this.lblHeading.TabIndex = 0;
+            this.lblHeading.Text = "Danh Sách Các Ca Làm Việc";
+            // 
             // ColumnMa
             // 
+            this.ColumnMa.DataPropertyName = "MaNV";
             this.ColumnMa.HeaderText = "Mã Nhân Viên";
             this.ColumnMa.MinimumWidth = 6;
             this.ColumnMa.Name = "ColumnMa";
@@ -127,6 +142,7 @@
             // 
             // ColumnTen
             // 
+            this.ColumnTen.DataPropertyName = "TenNV";
             this.ColumnTen.HeaderText = "Tên Nhân Viên";
             this.ColumnTen.MinimumWidth = 6;
             this.ColumnTen.Name = "ColumnTen";
@@ -134,6 +150,7 @@
             // 
             // ColumnSDT
             // 
+            this.ColumnSDT.DataPropertyName = "SDT";
             this.ColumnSDT.HeaderText = "SĐT";
             this.ColumnSDT.MinimumWidth = 6;
             this.ColumnSDT.Name = "ColumnSDT";
@@ -141,6 +158,7 @@
             // 
             // ColumnBuoi
             // 
+            this.ColumnBuoi.DataPropertyName = "CaLV";
             this.ColumnBuoi.HeaderText = "Ca Làm Việc";
             this.ColumnBuoi.MinimumWidth = 6;
             this.ColumnBuoi.Name = "ColumnBuoi";
@@ -148,31 +166,22 @@
             // 
             // ColumnNgay
             // 
+            this.ColumnNgay.DataPropertyName = "NgayLV";
             this.ColumnNgay.HeaderText = "Ngày Làm Việc";
             this.ColumnNgay.MinimumWidth = 6;
             this.ColumnNgay.Name = "ColumnNgay";
             this.ColumnNgay.ReadOnly = true;
             // 
-            // btnXuatFile
-            // 
-            this.btnXuatFile.BackColor = System.Drawing.Color.White;
-            this.btnXuatFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatFile.Location = new System.Drawing.Point(698, 715);
-            this.btnXuatFile.Name = "btnXuatFile";
-            this.btnXuatFile.Size = new System.Drawing.Size(170, 54);
-            this.btnXuatFile.TabIndex = 5;
-            this.btnXuatFile.Text = "Xuất File";
-            this.btnXuatFile.UseVisualStyleBackColor = false;
-            // 
             // UserControl_DSCLV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.panelDSCLV);
             this.Name = "UserControl_DSCLV";
             this.Size = new System.Drawing.Size(1561, 849);
+            this.Load += new System.EventHandler(this.UserControl_DSCLV_Load);
             this.panelDSCLV.ResumeLayout(false);
             this.panelDSCLV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_BangDS)).EndInit();

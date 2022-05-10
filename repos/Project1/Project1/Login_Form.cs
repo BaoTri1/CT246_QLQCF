@@ -31,5 +31,10 @@ namespace Project1
                 
 
         }
+
+        private void checkbox_GhiNho_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.lblPassWord = new System.Windows.Forms.Label();
             this.checkbox_GhiNho = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUseName
@@ -68,6 +69,7 @@
             this.checkbox_GhiNho.ForeColor = System.Drawing.Color.Black;
             this.checkbox_GhiNho.Name = "checkbox_GhiNho";
             this.checkbox_GhiNho.UseVisualStyleBackColor = false;
+            this.checkbox_GhiNho.CheckedChanged += new System.EventHandler(this.checkbox_GhiNho_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -78,11 +80,19 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Name = "label1";
+            // 
             // Form_Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.checkbox_GhiNho);
             this.Controls.Add(this.lblPassWord);
@@ -105,6 +115,7 @@
         private System.Windows.Forms.Label lblPassWord;
         private System.Windows.Forms.CheckBox checkbox_GhiNho;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

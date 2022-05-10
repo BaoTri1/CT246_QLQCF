@@ -34,6 +34,7 @@ namespace Project1
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+            btnXuatFile.Enabled = false;
         }
 
         private void btnXemDS_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace Project1
             }
             else
             {
-                cmd = new SqlCommand("Select * from NhanVien where ChucVu = '" + value + "';", conn);
+                cmd = new SqlCommand("Select * from NhanVien where ChucVu = N'" + value + "';", conn);
             }
 
             //Chuyển dữ liệu về data
@@ -64,11 +65,79 @@ namespace Project1
 
             //Đõ dữ liệu vào Bảng DataGirdViews
             DGV_BangDS.DataSource = dt;
+
+            btnXuatFile.Enabled = true;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
+            Form_ChinhSuaNV cs = new Form_ChinhSuaNV();
+            cs.Show();
+        }
 
+        private void ToExcel(String fileName)
+        {
+            //Khai báo thư viện hỗ trợ Microsoft.Office.Interop.Excel
+            Microsoft.Office.Interop.Excel.Application excel;
+            Microsoft.Office.Interop.Excel.Workbook workbook;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet;
+
+            try
+            {
+                //Tạo đối tượng COM
+                excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Visible = false;
+                excel.DisplayAlerts = false;
+
+                //Tạo mới workbook bằng phương thức Add()
+                workbook = excel.Workbooks.Add(Type.Missing);
+                worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets["Sheet1"];
+
+                //Đặt tên cho sheet
+                worksheet.Name = "Quản lý nhân viên";
+
+                //Thêm tiêu đề vào excel
+                for(int i = 0; i < DGV_BangDS.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i + 1] = DGV_BangDS.Columns[i].HeaderText;
+                }
+
+                //Thêm nội dung vào excel
+                for(int i = 0; i < DGV_BangDS.Rows.Count - 1; i++)
+                {
+                    for(int j = 0; j < DGV_BangDS.Columns.Count; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = DGV_BangDS.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                //Sử dụng phương thức SaveAs() để lưu workbook với fileName
+                workbook.SaveAs(fileName);
+
+                //Đóng workbook
+                workbook.Close();
+                excel.Quit();
+                MessageBox.Show("Xuất dữ liệu ra Excel thành công!!!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                worksheet = null;
+            }
+
+        }
+
+        private void btnXuatFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savefiledialog = new SaveFileDialog();
+            if(savefiledialog.ShowDialog() == DialogResult.OK)
+            {
+                ToExcel(savefiledialog.FileName);
+            }
         }
     }
 }

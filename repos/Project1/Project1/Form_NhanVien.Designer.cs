@@ -54,7 +54,7 @@
             this.quảnLýNhânViênToolStripMenuItem});
             this.Menu_QLNV.Location = new System.Drawing.Point(0, 0);
             this.Menu_QLNV.Name = "Menu_QLNV";
-            this.Menu_QLNV.Size = new System.Drawing.Size(1561, 28);
+            this.Menu_QLNV.Size = new System.Drawing.Size(1561, 30);
             this.Menu_QLNV.TabIndex = 0;
             this.Menu_QLNV.Tag = "Quản Lý Nhân Viên";
             this.Menu_QLNV.Text = "menuStrip1";
@@ -67,7 +67,7 @@
             this.danhsachcalamviectoolStripMenuItem});
             this.Menu_QLCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_QLCLV.Name = "Menu_QLCLV";
-            this.Menu_QLCLV.Size = new System.Drawing.Size(188, 24);
+            this.Menu_QLCLV.Size = new System.Drawing.Size(188, 26);
             this.Menu_QLCLV.Text = "Quản Lý Ca Làm Việc";
             // 
             // điểmDanhToolStripMenuItem
@@ -94,7 +94,7 @@
             this.thêmMớiToolStripMenuItem});
             this.quảnLýNhânViênToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản Lý Nhân Viên";
             // 
             // danhSáchNhânViênToolStripMenuItem
@@ -157,11 +157,12 @@
             this.Controls.Add(this.panelContain);
             this.Controls.Add(this.Menu_QLNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_QLNV;
             this.MaximizeBox = false;
             this.Name = "Form_NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_NhanVien";
+            this.Text = "Nhân Viên";
             this.Menu_QLNV.ResumeLayout(false);
             this.Menu_QLNV.PerformLayout();
             this.panelContain.ResumeLayout(false);

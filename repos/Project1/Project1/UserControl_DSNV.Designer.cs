@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_DSNV));
             this.panelContaint = new System.Windows.Forms.Panel();
+            this.lblChuThich2 = new System.Windows.Forms.Label();
             this.btnXuatFile = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXemDS = new System.Windows.Forms.Button();
             this.cmbHienThi = new System.Windows.Forms.ComboBox();
             this.lblHienThi = new System.Windows.Forms.Label();
             this.DGV_BangDS = new System.Windows.Forms.DataGridView();
-            this.lblHeading = new System.Windows.Forms.Label();
             this.ColumnMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblChuThich = new System.Windows.Forms.Label();
+            this.lblHeading = new System.Windows.Forms.Label();
+            this.lblChuThich1 = new System.Windows.Forms.Label();
             this.panelContaint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_BangDS)).BeginInit();
             this.SuspendLayout();
@@ -52,10 +52,10 @@
             // panelContaint
             // 
             this.panelContaint.BackColor = System.Drawing.Color.Transparent;
-            this.panelContaint.Controls.Add(this.lblChuThich);
+            this.panelContaint.Controls.Add(this.lblChuThich1);
+            this.panelContaint.Controls.Add(this.lblChuThich2);
             this.panelContaint.Controls.Add(this.btnXuatFile);
             this.panelContaint.Controls.Add(this.btnChinhSua);
-            this.panelContaint.Controls.Add(this.btnCapNhat);
             this.panelContaint.Controls.Add(this.btnXemDS);
             this.panelContaint.Controls.Add(this.cmbHienThi);
             this.panelContaint.Controls.Add(this.lblHienThi);
@@ -66,40 +66,39 @@
             this.panelContaint.Size = new System.Drawing.Size(1561, 849);
             this.panelContaint.TabIndex = 0;
             // 
+            // lblChuThich2
+            // 
+            this.lblChuThich2.AutoSize = true;
+            this.lblChuThich2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuThich2.Location = new System.Drawing.Point(1317, 780);
+            this.lblChuThich2.Name = "lblChuThich2";
+            this.lblChuThich2.Size = new System.Drawing.Size(210, 25);
+            this.lblChuThich2.TabIndex = 8;
+            this.lblChuThich2.Text = "True(Nam), False(Nữ).";
+            // 
             // btnXuatFile
             // 
             this.btnXuatFile.BackColor = System.Drawing.Color.White;
             this.btnXuatFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatFile.Location = new System.Drawing.Point(1088, 688);
+            this.btnXuatFile.Location = new System.Drawing.Point(997, 688);
             this.btnXuatFile.Name = "btnXuatFile";
             this.btnXuatFile.Size = new System.Drawing.Size(190, 55);
             this.btnXuatFile.TabIndex = 7;
-            this.btnXuatFile.Text = "Xuất File";
+            this.btnXuatFile.Text = "Xuất File Excel";
             this.btnXuatFile.UseVisualStyleBackColor = false;
+            this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
             // 
             // btnChinhSua
             // 
             this.btnChinhSua.BackColor = System.Drawing.Color.White;
             this.btnChinhSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Location = new System.Drawing.Point(237, 688);
+            this.btnChinhSua.Location = new System.Drawing.Point(369, 688);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(190, 55);
             this.btnChinhSua.TabIndex = 6;
             this.btnChinhSua.Text = "Chỉnh Sửa";
             this.btnChinhSua.UseVisualStyleBackColor = false;
             this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.White;
-            this.btnCapNhat.Enabled = false;
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(684, 688);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(190, 55);
-            this.btnCapNhat.TabIndex = 5;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = false;
             // 
             // btnXemDS
             // 
@@ -158,16 +157,6 @@
             this.DGV_BangDS.Size = new System.Drawing.Size(1353, 474);
             this.DGV_BangDS.TabIndex = 1;
             // 
-            // lblHeading
-            // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(543, 23);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(408, 42);
-            this.lblHeading.TabIndex = 0;
-            this.lblHeading.Text = "Danh Sách Nhân Viên";
-            // 
             // ColumnMa
             // 
             this.ColumnMa.DataPropertyName = "MaNV";
@@ -216,15 +205,26 @@
             this.ColumnDiaChi.Name = "ColumnDiaChi";
             this.ColumnDiaChi.ReadOnly = true;
             // 
-            // lblChuThich
+            // lblHeading
             // 
-            this.lblChuThich.AutoSize = true;
-            this.lblChuThich.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChuThich.Location = new System.Drawing.Point(1266, 781);
-            this.lblChuThich.Name = "lblChuThich";
-            this.lblChuThich.Size = new System.Drawing.Size(232, 18);
-            this.lblChuThich.TabIndex = 8;
-            this.lblChuThich.Text = "Chú Thích: True(Nam), False(Nữ).";
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(543, 23);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(408, 42);
+            this.lblHeading.TabIndex = 0;
+            this.lblHeading.Text = "Danh Sách Nhân Viên";
+            // 
+            // lblChuThich1
+            // 
+            this.lblChuThich1.AutoSize = true;
+            this.lblChuThich1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuThich1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblChuThich1.Location = new System.Drawing.Point(1202, 780);
+            this.lblChuThich1.Name = "lblChuThich1";
+            this.lblChuThich1.Size = new System.Drawing.Size(109, 25);
+            this.lblChuThich1.TabIndex = 9;
+            this.lblChuThich1.Text = "Chú Thích:";
             // 
             // UserControl_DSNV
             // 
@@ -251,7 +251,6 @@
         private System.Windows.Forms.Label lblHienThi;
         private System.Windows.Forms.Button btnXemDS;
         private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnXuatFile;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTen;
@@ -259,6 +258,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChucVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiaChi;
-        private System.Windows.Forms.Label lblChuThich;
+        private System.Windows.Forms.Label lblChuThich2;
+        private System.Windows.Forms.Label lblChuThich1;
     }
 }

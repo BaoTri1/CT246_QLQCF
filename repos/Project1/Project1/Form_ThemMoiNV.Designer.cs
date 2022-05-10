@@ -191,7 +191,7 @@
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.Location = new System.Drawing.Point(394, 771);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(158, 43);
+            this.btnXacNhan.Size = new System.Drawing.Size(158, 50);
             this.btnXacNhan.TabIndex = 13;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
@@ -203,7 +203,7 @@
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.Location = new System.Drawing.Point(131, 770);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(158, 43);
+            this.btnLamMoi.Size = new System.Drawing.Size(158, 50);
             this.btnLamMoi.TabIndex = 14;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -215,7 +215,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(676, 771);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(158, 43);
+            this.btnHuy.Size = new System.Drawing.Size(158, 50);
             this.btnHuy.TabIndex = 15;
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -247,7 +247,7 @@
             this.MaximizeBox = false;
             this.Name = "Form_ThemMoiNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_ThemMoiNV";
+            this.Text = "Thêm Mới Nhân Viên";
             this.Load += new System.EventHandler(this.Form_ThemMoiNV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
